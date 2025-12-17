@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="./img/EMBLEMA.png" type="/x-icon">
+    <title>VIVIART CROCHÊ</title>
+</head>
+
+
+
+
+<header>
+    <div class="icones" data-aos="fade-left" data-aos-duration="1200">
+        <img src="./img/whatsapp.png" class="icone" alt="">
+        <img src="./img/instagram.png" class="icone" alt="">
+    </div>
+
+
+    <div class="icones2" data-aos="fade-right" data-aos-duration="1200">
+        <img src="./img/lupa.png" class="icone2" alt="">
+
+        <input type="text" class="barra-pesquisa" placeholder="Pesquisar">
+    </div>
+
+    <div class="iconeperfil" id="perfilBox">
+        <a href="login.html">
+            <img src="./img/perfil.png" class="icone2" alt="">
+        </a>
+        <span id="nomeUsuario"></span>
+        <button id="logoutBtn">Sair</button>
+    </div>
+    
+
+
+
+
+    <img src="./img/VIVIART CROCHE.png" alt="" data-aos="fade-down" data-aos-duration="1200">
+
+    <nav class="menu" data-aos="fade-up" data-aos-duration="1200">
+        <a href="#sobre"><span>Sobre</span></a>
+        <a href="#colecao"><span>Coleção</span></a>
+        <a href="#eventos"><span>Eventos</span></a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <h1 class="titulo-novidades" data-aos="fade-up" data-aos-duration="1200">
+            NOVIDADES
+        </h1>
+
+        <div class="quadrado" data-aos="fade-up" data-aos-duration="1200">
+            <div class="linha vertical"></div>
+            <div class="linha horizontal"></div>
+            <div class="linha horizontal2"></div>
+            <div class="linha horizontal3"></div>
+
+            <div class="slider-container">
+                <button class="arrow left" onclick="prevImage()">❮</button>
+
+                <div class="slider">
+                    <img src="./img/bolsa1.png" class="slide active">
+                    <img src="./img/bolsa2.png" class="slide">
+                    <img src="./img/bolsa3.png" class="slide">
+                </div>
+
+                <button class="arrow right" onclick="nextImage()">❯</button>
+
+            </div>
+
+            <div class="titulo">
+                VIVIART
+                <br>
+                <span class="subtitulo">CROCHÊ</span>
+            </div>
+        </div>
+
+        <section class="secao-com-fundo" id="sobre">
+            <div class="wrapper">
+                <div class="quadrado2" data-aos="fade-right" data-aos-duration="1200">
+                    <h2>Viviart Crochê</h2>
+                    <p>
+                        A Viviart Crochê nasceu do amor pelo artesanal e pela delicadeza dos detalhes.<br>
+                        Cada peça é criada à mão, com dedicação, paciência e muito carinho.<br>
+                        O crochê, que começou como um hobby, transformou-se em um projeto de vida, levando arte e afeto
+                        para cada cliente.<br>
+                        A missão da Viviart é inspirar o apreço pelo feito à mão, valorizando o tempo, o cuidado e a
+                        autenticidade de cada criação.<br>
+                        Mais do que acessórios, cada peça carrega uma história tecida com amor.
+                    </p>
+
+                </div>
+
+
+                <img src="./img/principal.png" class="img-fora" data-aos="zoom-in" data-aos-duration="1200">
+            </div>
+        </section>
+
+
+        <h1 class="titulo-novidades" data-aos="fade-down" data-aos-duration="1200">COLEÇÃO</h1>
+
+
+
+        <div id="colecao" class="titulo-novidades" data-aos="fade-up" data-aos-duration="1200">
+            <div class="pagina active">
+                <!-- Página 1 (máx 6 itens) -->
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 1</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 2</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 3</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 4</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 5</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 6</h3>
+                </div>
+            </div>
+
+            <div class="pagina"><!-- Página 2 -->
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 7</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 8</h3>
+                </div>
+                <div class="colecao"><img src="./img/bolsafundo1.PNG">
+                    <h3>Título 9</h3>
+                </div>
+            </div>
+
+            <!-- Bolinhas de navegação -->
+            <div class="paginacao">
+                <span class="dot-paginacao active" onclick="mudarPagina(0, this)"></span>
+                <span class="dot-paginacao" onclick="mudarPagina(1, this)"></span>
+
+            </div>
+        </div>
+
+
+        <h1 class="titulo-eventos" id="eventos" data-aos="fade-down" data-aos-duration="1200">EVENTOS</h1>
+        <div class="timeline-container">
+
+            <button class="arrow left" id="btnLeft" data-aos="fade-down" data-aos-duration="1200">←</button>
+            <button class="arrow right" id="btnRight" data-aos="fade-down" data-aos-duration="1200">→</button>
+
+            <!-- Linha horizontal -->
+            <div class="timeline-line" data-aos="fade-down" data-aos-duration="1200"></div>
+
+            <div class="timeline" id="timeline" data-aos="fade-down" data-aos-duration="1200">
+
+                <div class="event" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="card">
+                        <h3>Evento 1</h3>
+                        <p>00/00/0000</p>
+                        <p>RESUMO</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <div class="event">
+                    <div class="card">
+                        <h3>Evento 2</h3>
+                        <p>00/00/0000</p>
+                        <p>RESUMO</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <div class="event">
+                    <div class="card">
+                        <h3>Evento 3</h3>
+                        <p>00/00/0000</p>
+                        <p>RESUMO</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <div class="event">
+                    <div class="card">
+                        <h3>Evento 4</h3>
+                        <p>00/00/0000</p>
+                        <p>RESUMO</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <div class="event">
+                    <div class="card">
+                        <h3>Evento 5</h3>
+                        <p>00/00/0000</p>
+                        <p>RESUMO</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <div class="event">
+                    <div class="card">
+                        <h3>Evento 6</h3>
+                        <p>00/00/0000</p>
+                        <p>RESUMO</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="dot"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1200">
+        <div class="footer-content">
+
+            <div class="footer-esquerda">
+                <img src="./img/EMBLEMA.png" alt="">
+                <p>Artesanato feito com amor</p>
+            </div>
+
+            <div class="footer-centro">
+                <h2>Navegação</h2>
+                <a href="#colecao">Coleção</a>
+                <a href="#eventos">Eventos</a>
+            </div>
+
+            <div class="footer-direita">
+                <h2>Contato</h2>
+                <div class="icones-footer">
+                    <img src="./img/whatsapp.png" alt="WhatsApp">
+                    <img src="./img/instagram.png" alt="Instagram">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-linha">
+            <p class="copy">
+                © 2025 Viviart Crochê. Todos os direitos reservados
+            </p>
+            <p class="feito">
+                Feito por Vinícius Kawasugui Santiago
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- MODAL / POPUP -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <div class="modal-left">
+
+                <div class="image-view">
+                    <img id="modal-main-img" src="" class="main-img">
+                </div>
+
+                <div class="thumbs">
+                    <img src="./img/bolsa1.png" onclick="trocarImagem(this)">
+                    <img src="./img/bolsa2.png" onclick="trocarImagem(this)">
+                    <img src="./img/bolsa3.png" onclick="trocarImagem(this)">
+                    <img src="./img/bolsa4.png" onclick="trocarImagem(this)">
+                </div>
+
+            </div>
+
+
+            <div class="modal-right">
+
+                <span class="categoria">BOLSAS ARTESANAIS</span>
+
+                <h2 id="modal-title">Bolsa de Crochê</h2>
+
+                <div class="info-produto">
+                    <p><strong>Material:</strong> Crochê artesanal</p>
+                    <p><strong>Cor:</strong> Rosa</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="bloco-info">
+                    <h4>Instruções de Lavagem</h4>
+                    <ul class="lista-lavagem">
+                        <li>Lavar à mão</li>
+                        <li>Não alvejar</li>
+                        <li>Não secar em tambor</li>
+                        <li>Secar em varal e à sombra</li>
+                        <li>Passar pelo lado avesso</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!-- ===== MODAL EVENTOS ===== -->
+    <div id="modalEvento" class="modal" style="display:none;">
+        <div class="modal-content modal-evento">
+
+            <span class="close-evento">&times;</span>
+
+            <div class="evento-left">
+                <div class="carousel">
+
+                    <!-- seta esquerda -->
+                    <button class="arrow left" onclick="prevEvento()">❮</button>
+
+                    <!-- imagem -->
+                    <img id="evento-img" src="" alt="Evento">
+
+                    <!-- seta direita -->
+                    <button class="arrow right" onclick="nextEvento()">❯</button>
+
+                </div>
+            </div>
+
+            <div class="evento-right">
+                <span class="data-evento"></span>
+                <h2 id="evento-titulo"></h2>
+                <p id="evento-desc"></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+   
+
+
+    <script>
+        const user = JSON.parse(localStorage.getItem("loggedUser"));
+
+        if (user) {
+            document.getElementById("nomeUsuario").innerText = user.nome;
+        }
+
+        const btn = document.getElementById("logoutBtn");
+        btn.addEventListener("click", () => {
+            localStorage.removeItem("loggedUser");
+            window.location.href = "login.html";
+        });
+    </script>
+
+<script src="auth.js"></script>
+
+
+</body>
+
+</html>

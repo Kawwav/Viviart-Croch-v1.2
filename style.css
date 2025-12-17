@@ -1,0 +1,1494 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    height: 250px;
+    align-items: center;
+}
+
+header img {
+    width: 400px;
+    height: auto;
+}
+
+.icones {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icone {
+    width: 50px;
+    height: auto;
+    transition: transform 1s ease;
+}
+
+.icone:hover {
+    transform: translateX(30px);
+
+}
+
+.icones2 {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.icone2 {
+    width: 50px;
+    height: auto;
+    transition: transform 1s ease;
+}
+
+.icones2:hover .barra-pesquisa {
+    width: 200px;
+    padding: 0 15px;
+    opacity: 1;
+}
+
+#perfilBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#perfilBox span {
+  margin-top: 15px;
+  margin-right: 5px;
+  font-size: 24px;
+  color: #6D1231;
+  font-weight: bold;
+}
+
+#logoutBtn {
+  margin-top: 4px;
+  background: #972a4e;
+  border: none;
+  padding: 4px 12px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#logoutBtn:hover {
+  background: #b10052;
+}
+
+
+.iconeperfil {
+    position: absolute;
+    top: 20px;
+    right: 0px; /* ajuste se necessário */
+}
+
+.iconeperfil img {
+    width: 50px;
+    transition: transform 1s ease;
+}
+
+.iconeperfil img:hover {
+    transform: translateY(-10px);
+}
+
+.barra-pesquisa {
+    width: 0;
+    height: 40px;
+    padding: 0;
+    opacity: 0;
+    border-radius: 20px;
+    background-color: #ffe5ee;
+    border: 1px solid #6D1231;
+    transition: 1.0s ease;
+}
+
+.menu {
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu a {
+
+    text-decoration: none;
+    /* remove o sublinhado */
+    font-size: 20px;
+    /* tamanho do texto */
+    color: #6D1231;
+    /* cor do texto (mude se quiser) */
+    font-weight: bold;
+    /* deixa mais bonito */
+    padding: 20px;
+    border-right: 2px solid #6D1231;
+}
+
+.menu a span {
+    margin-right: 25px;
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.menu a:hover span {
+    transform: translateY(-10px);
+}
+
+/* Remove a linha do último item */
+.menu a:last-child {
+    border-right: none;
+}
+
+.titulo-novidades {
+    text-align: center;
+    font-size: 50px;
+    color: #6D1231;
+    margin-top: 140px;
+    font-weight: bold;
+}
+
+
+.quadrado {
+    width: 1200px;
+    height: 600px;
+    background-color: #ffa1a0;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* deixa o conteúdo mais para cima */
+    padding-top: 100px;
+    /* distância do topo */
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    color: #972a4e;
+    font-size: 80px;
+}
+
+.titulo {
+    margin-top: -90px;
+    margin-right: 325px;
+    /* move somente o VIVIART */
+}
+
+.subtitulo {
+    display: block;
+    margin-top: 5px;
+    /* distancia para baixo */
+    margin-left: 666px;
+    color: #77062c;
+}
+
+.linha.vertical {
+    position: absolute;
+    height: 1100px;
+    /* altura da linha vertical */
+    width: 6px;
+    /* largura da linha vertical */
+    background-color: #6D1231;
+    left: 50%;
+    /* centraliza horizontalmente */
+    top: 100px;
+    /* começa do topo */
+    transform: translateX(50%);
+    /* centraliza exatamente */
+}
+
+.linha.horizontal {
+    position: absolute;
+    height: 6px;
+    /* altura da linha horizontal */
+    width: 670px;
+    /* largura da linha horizontal */
+    background-color: #6D1231;
+    left: 50%;
+    /* ponto inicial da linha horizontal */
+    top: 100px;
+    /* altura em que a linha horizontal fica */
+    transform: translateX(-99%);
+    /* centraliza em relação à vertical */
+}
+
+.linha.horizontal2 {
+    position: absolute;
+    height: 6px;
+    /* altura da linha horizontal */
+    width: 670px;
+    /* largura da linha horizontal */
+    background-color: #6D1231;
+    left: 50%;
+    /* ponto inicial da linha horizontal */
+    top: 450px;
+    /* altura em que a linha horizontal fica */
+    transform: translateX(-99%);
+    /* centraliza em relação à vertical */
+}
+
+.linha.horizontal3 {
+    position: absolute;
+    height: 6px;
+    /* altura da linha horizontal */
+    width: 670px;
+    /* largura da linha horizontal */
+    background-color: #6D1231;
+    right: -740px;
+    top: 600px;
+    /* altura em que a linha horizontal fica */
+    transform: translateX(-99%);
+    /* centraliza em relação à vertical */
+}
+
+
+/* Container principal do slider */
+.slider-container {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    /* -10% para subir um pouco e não colidir com o texto */
+    width: 700px;
+    height: 460px;
+}
+
+/* Área onde as imagens ficam */
+.slider {
+    position: relative;
+    /* Necessário para posicionamentos absolutos dentro */
+    width: 100%;
+    /* Ocupa toda a largura do container */
+    height: 100%;
+    /* Ocupa toda a altura do container */
+
+}
+
+/* TODAS as imagens do slider */
+.slide {
+    position: absolute;
+    /* Permite mover as imagens livremente */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o centro real da imagem */
+    transition: 0.6s ease;
+    /* Anima mudanças suaves */
+}
+
+/* IMAGEM DO FUNDO (qualquer slide que NÃO está ativo) */
+.slide:not(.active) {
+    opacity: 0.4;
+    filter: blur(4px);
+    width: 280px;
+    z-index: 1;
+}
+
+/* IMAGEM DA ESQUERDA (quando marcada como .left via JS) */
+.slide.left {
+    transform: translate(-9%, -50%) rotate(-8deg) scale(0.8);
+    /* Move bem para esquerda, inclina levemente e reduz tamanho */
+}
+
+/* IMAGEM DA DIREITA (quando marcada como .right via JS) */
+.slide.right {
+    transform: translate(30%, -50%) rotate(8deg) scale(0.8);
+    /* Move para a direita, inclina e reduz tamanho */
+}
+
+/* IMAGEM ATIVA (central) */
+.slide.active {
+    width: 550px;
+    /* Imagem grande */
+    opacity: 1;
+    /* Totalmente visível */
+    filter: blur(0);
+    /* Sem desfoque */
+    z-index: 5;
+    /* Fica na frente das outras */
+    transform: translate(-50%, -50%) scale(1);
+    /* Mantém central e no tamanho normal */
+}
+
+/* Estilo geral das setas */
+.arrow {
+    background-color: #972a4e;
+    color: white;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 2px 25px;
+    border-radius: 10px;
+
+    position: absolute;
+    z-index: 50;
+}
+
+
+/* Posição da seta da esquerda */
+.left {
+    position: absolute;
+    /* Fixa dentro do container */
+    left: -10px;
+    /* Coloca à esquerda do slider */
+    top: 50%;
+    /* Centraliza verticalmente */
+}
+
+/* Posição da seta da direita */
+.right {
+    position: absolute;
+    /* Fixa dentro do container */
+    right: -70px;
+    /* Coloca à direita do slider */
+    top: 50%;
+    /* Centraliza verticalmente */
+}
+
+.wrapper {
+    position: relative;
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.quadrado2 {
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    background-color: #6D1231;
+    border-radius: 20px;
+    clip-path: polygon(0 0,
+            60% 0,
+            140% 100%,
+            0 100%);
+
+    padding: 40px;
+    /* Adicione isso */
+}
+
+.img-fora {
+    border-radius: 60px;
+    position: absolute;
+    right: -10px;
+    top: -1px;
+    width: 400px;
+    z-index: 10;
+}
+
+.secao-com-fundo {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    /* para garantir que nada escape */
+}
+
+.secao-com-fundo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* ocupa toda a área */
+    background-image: url('./img/close-up-feminino-de-trico.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.41;
+    /* somente o fundo */
+    z-index: 0;
+}
+
+.secao-com-fundo .wrapper {
+    position: relative;
+    z-index: 2;
+    /* garante que fique acima do fundo */
+}
+
+.quadrado2 h2 {
+    margin-left: 50px;
+    font-size: 50px;
+    /* tamanho do título */
+    color: #fff;
+    /* cor do texto */
+    margin-bottom: 20px;
+    /* espaço abaixo do título */
+    font-weight: 700;
+    /* deixa mais forte */
+}
+
+.quadrado2 p {
+    margin-left: 20px;
+    margin-top: 50px;
+    font-size: 18px;
+    /* tamanho do parágrafo */
+    color: #fff;
+    /* cor do texto */
+    line-height: 1.6;
+    /* melhora a leitura */
+    max-width: 600px;
+    /* não deixa o texto muito longo */
+}
+
+
+/* Oculta páginas que não estão ativas */
+.pagina {
+    display: none;
+    animation: fade 0.4s ease;
+}
+
+.pagina.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Bolinhas de paginação */
+.paginacao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot-paginacao {
+    width: 14px;
+    height: 14px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot-paginacao.active {
+    background-color: #ff6b6b;
+    transform: scale(1.3);
+}
+
+.dot-paginacao::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+}
+
+
+
+.dot-paginacao.pingo::before {
+    animation: pingo-horizontal 10.6s ease forwards;
+}
+
+@keyframes pingo-horizontal {
+    0% {
+        transform: translateY(-50%) translateX(0) scale(0.2);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(-50%) translateX(16px) scale(1);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(16px) scale(0);
+        opacity: 0;
+    }
+}
+
+
+.dot-paginacao.from-left::before {
+    left: -16px;
+    animation: pingo-left 0.6s ease forwards;
+}
+
+@keyframes pingo-left {
+    0% {
+        transform: translateY(-50%) translateX(0) scale(0.2);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(-50%) translateX(16px) scale(1);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(16px) scale(0);
+        opacity: 0;
+    }
+}
+
+
+.dot-paginacao.from-right::before {
+    right: -16px;
+    animation: pingo-right 0.6s ease forwards;
+}
+
+@keyframes pingo-right {
+    0% {
+        transform: translateY(-50%) translateX(0) scale(0.2);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(-50%) translateX(-16px) scale(1);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-16px) scale(0);
+        opacity: 0;
+    }
+}
+
+
+/* Seus cards */
+.colecao {
+    width: 300px;
+    height: 350px;
+    background-color: #ffa1a0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #972a4e;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+.colecao:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+    transform: translateX(30px);
+}
+
+.colecao h3 {
+    font-size: 20px;
+    margin-top: -3px;
+}
+
+.colecao img {
+    width: 260px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.colecao:hover {
+    transform: translatey(-30px);
+
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #ffe5ee;
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    position: relative;
+    animation: aparecer 0.4s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* fechar */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #6D1231;
+}
+
+/* esquerda */
+.modal-left {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* área da imagem principal */
+.image-view {
+    width: 100%;
+    height: 320px; /* 🔥 limita o tamanho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #f7dce5;
+}
+
+
+/* imagem principal */
+.main-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 🔥 não estoura */
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.main-img.zoom {
+    transform: scale(1.8);
+    cursor: zoom-out;
+}
+
+/* miniaturas */
+.thumbs {
+    width: 100%;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.thumbs img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.thumbs img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* direita */
+/* ===== TEXTO MODAL ===== */
+
+.modal-right {
+    width: 52%;
+    color: #6D1231;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* categoria */
+.categoria {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a35a72;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* título */
+.modal-right h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.2;
+}
+
+/* infos rápidas */
+.info-produto p {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+.info-produto strong {
+    color: #972a4e;
+}
+
+/* divisor */
+.divider {
+    width: 60px;
+    height: 3px;
+    background: #972a4e;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+/* bloco */
+.bloco-info h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* lista */
+.lista-lavagem {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-lavagem li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #6D1231;
+}
+
+/* ícone antes do texto */
+.lista-lavagem li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #972a4e;
+    font-weight: bold;
+}
+
+
+
+
+
+.titulo-eventos {
+    text-align: center;
+    font-size: 50px;
+    color: #6D1231;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+/* Linha horizontal */
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    /* centro da tela */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #7b0038;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    gap: 150px;
+    padding: 20px;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cada evento */
+.event {
+     cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    text-align: center;
+}
+
+/* Card */
+.card {
+    cursor: pointer;
+    width: 170px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #7b0038;
+    border-radius: 10px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/*  Alternância automática dos cards */
+.event:nth-child(odd) .card {
+    margin-bottom: 270px;
+    /* card em cima */
+}
+
+.event:nth-child(even) .card {
+    margin-top: 270px;
+    /* card embaixo */
+}
+
+/* Linha vertical entre card e ponto */
+.vertical-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: #7b0038;
+    z-index: 3;
+
+    /* Ajuste automático do tamanho baseado na posição do card */
+}
+
+.event:nth-child(odd) .vertical-line {
+    /* Card em cima → linha vai até embaixo */
+
+    top: 160px;
+    height: 52px;
+}
+
+
+.event:nth-child(even) .vertical-line {
+    /* Card embaixo → linha vai até em cima */
+    bottom: 160px;
+    height: 52px;
+}
+
+/*bolinha linha do tempo */
+.dot {
+    width: 16px;
+    height: 16px;
+    background: #7b0038;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #7b0038;
+    /* ← COR DO FUNDO */
+    color: white;
+    /* ← COR DA SETA */
+    border: none;
+    padding: 10px 15px;
+    font-size: 22px;
+    /* ← TAMANHO DA SETA */
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* seta esquerda */
+.arrow.left {
+    left: 20px;
+    /* ← POSIÇÃO LATERAL */
+}
+
+/* seta direita */
+.arrow.right {
+    right: 20px;
+    /* ← POSIÇÃO LATERAL */
+}
+
+/* efeito ao passar o mouse */
+.arrow:hover {
+    background: #a3004d;
+    /* ← HOVER */
+}
+
+/* ===== MODAL EVENTO ===== */
+
+.modal-evento {
+    width: 900px;
+    height: 500px;
+}
+
+/* esquerda */
+.evento-left {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* setas */
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(123, 0, 56, 0.8);
+    color: white;
+    border: none;
+    font-size: 28px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+.carousel .arrow.left {
+    left: 15px;
+}
+
+.carousel .arrow.right {
+    right: 15px;
+}
+
+.carousel .arrow:hover {
+    background: #a3004d;
+}
+
+/* direita */
+.evento-right {
+    width: 45%;
+    padding: 20px;
+    color: #6D1231;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.data-evento {
+    font-size: 14px;
+    color: #972a4e;
+    margin-bottom: 10px;
+}
+
+#evento-desc {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* botão fechar */
+.close-evento {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #6D1231;
+}
+
+
+
+.footer {
+    border-top: 2px solid #6D1231;
+    background: linear-gradient(to bottom, #F7A1A0, #E6E6E6);
+    padding: 40px 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    /* IMPORTANTE */
+}
+
+.footer-esquerda img {
+    width: 130px;
+}
+
+.footer-esquerda p {
+    font-size: 24px;
+    margin-top: 8px;
+    color: #6D1231;
+}
+
+.footer-centro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-centro h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #6D1231;
+}
+
+.footer-centro a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #6D1231;
+    margin: 6px 0;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.footer-centro a:hover {
+    transform: translateY(-5px);
+    color: #a3004d;
+}
+
+
+.footer-direita h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #6D1231;
+}
+
+.icones-footer {
+    display: flex;
+    gap: 15px;
+}
+
+.icones-footer img {
+    width: 30px;
+    cursor: pointer;
+    transition: transform 1s ease;
+}
+
+.icones-footer img:hover {
+    transform: translateY(20px);
+}
+
+
+/* Linha inferior */
+.footer-linha {
+    border-top: 1px solid #333;
+
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
+    margin-top: 30px;
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: flex-end;
+    /* empurra tudo para a direita */
+    align-items: center;
+
+
+    position: relative;
+    /* necessário para o centro absoluto */
+}
+
+/* Texto central */
+.copy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    color: #6D1231;
+}
+
+/* Texto da direita */
+.feito {
+    font-size: 12px;
+    margin: 0;
+    margin-right: 10px;
+    color: #6D1231;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* estado inicial escondido */
+.pagina .colecao {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+}
+
+/* quando página ativa */
+.pagina.active .colecao {
+    animation: desfile 0.7s ease forwards;
+    animation-fill-mode: forwards;
+}
+
+/* efeito em cascata */
+.pagina.active .colecao:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.pagina.active .colecao:nth-child(2) {
+    animation-delay: 0.20s;
+}
+
+.pagina.active .colecao:nth-child(3) {
+    animation-delay: 0.25;
+}
+
+.pagina.active .colecao:nth-child(4) {
+    animation-delay: 0.30;
+}
+
+.pagina.active .colecao:nth-child(5) {
+    animation-delay: 0.35s;
+}
+
+.pagina.active .colecao:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+@keyframes desfile {
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.9);
+        filter: blur(6px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.03);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+
+/* TELA DE CADASTRO E LOGIN */
+
+/* FUNDO */
+.fundo {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+  linear-gradient(to right, rgba(255,130,155,0.7), rgba(255,255,255,0.4)),
+  url('./img/crochelogin.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background:#ff76b8;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn-voltar:hover {
+  background: #ff76b8;
+  transform: scale(1.08);
+}
+
+
+
+.tela-login {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+.login-container{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  position:relative;
+  width:900px;
+  max-width:100%;
+  min-height:500px;
+  overflow:hidden;
+}
+
+/* formulários */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza vertical */
+  align-items: center;     /* centraliza horizontal */
+  height: 100%;
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontal */
+  gap: 12px;
+  width: 100%;
+}
+
+form input{
+  width:70%;
+  padding:12px;
+  margin:6px;
+  border-radius:10px;
+  border:1px solid #aaa;
+}
+
+form input,
+form button {
+  width: 320px; /* pode ajustar */
+}
+
+form button{
+  margin-top:10px;
+  padding:12px 45px;
+  border-radius:20px;
+  border:none;
+  background:#ff76b8;
+  color:#fff;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* login */
+.sign-in-container{
+  left:0;
+  width:50%;
+  z-index:2;
+  position:absolute;
+}
+/* criar conta (some até clicar) */
+.sign-up-container{
+  left:0;
+  width:50%;
+  opacity:0;
+  z-index:1;
+  position:absolute;
+}
+
+/* overlay que vai animar */
+.overlay-container{
+  position:absolute;
+  top:0;
+  left:50%;
+  width:50%;
+  height:100%;
+  overflow:hidden;
+  transition:transform 0.6s ease-in-out;
+  z-index:100;
+}
+
+
+.overlay{
+  background:linear-gradient(135deg,#ffffff,#800337);
+  background-size:cover;
+  color:#ffffff;
+  position:relative;
+  left:-100%;
+  width:200%;
+  height:100%;
+  transform:translateX(0);
+  transition:transform 0.6s ease-in-out;
+}
+
+.overlay-panel{
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 40px;
+  width:50%;
+  height:100%;
+}
+
+.overlay-left{
+  left:0;
+  transform: translateX(0);
+}
+.overlay-right{
+     right:0; transform:translateX(0); }
+
+.ghost{
+  background:transparent;
+  border:1px solid #fff;
+  padding:12px 45px;
+  border-radius:20px;
+  color:#fff;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+/* ATIVAÇÃO DO MODO CADASTRO */
+.login-container.right-panel-active .sign-in-container{
+  transform:translateX(100%);
+  opacity:0;
+}
+
+.login-container.right-panel-active .sign-up-container{
+  transform:translateX(100%);
+  opacity:1;
+  z-index:5;
+}
+
+.login-container.right-panel-active .overlay{
+  transform:translateX(50%);
+}
+
+.login-container.right-panel-active .overlay-container{
+  transform:translateX(-100%);
+}
+
+.sign-in-container,
+.sign-up-container {
+  transition: all .6s ease-in-out;
+}
+
+
+/* ===========================
+   LOGIN RESPONSIVO COM OVERLAY
+   =========================== */
+@media (max-width: 600px) {
+
+  .login-container {
+    width: 350px;
+    height: 520px;
+  }
+
+  /* FORM CONTAINERS */
+  .form-container {
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  form {
+    gap: 6px;
+  }
+
+  form input {
+    width: 130px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  form button {
+    padding: 8px 18px;
+    width: 140px;
+    font-size: 12px;
+  }
+
+  /* TEXTOS DO FORM */
+  .form-container h1 {
+    font-size: 18px;
+  }
+
+  .form-container span,
+  .form-container a {
+    font-size: 10px;
+  }
+
+  /* OVERLAY */
+  .overlay-container {
+    width: 50%;
+  }
+
+  .overlay-panel {
+    padding: 0 10px;
+  }
+
+  .overlay-panel h1 {
+    font-size: 16px;
+  }
+
+  .overlay-panel p {
+    font-size: 10px;
+  }
+
+  .ghost {
+    padding: 6px 18px;
+    font-size: 10px;
+  }
+
+  /* Ajusta animação */
+  .login-container.right-panel-active .sign-in-container{
+    transform:translateX(100%);
+  }
+
+  .login-container.right-panel-active .sign-up-container{
+    transform:translateX(100%);
+  }
+}

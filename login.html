@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="fundo"></div>
+    <div class="login-container" id="container">
+
+        <body class="tela-login">
+            <!-- COLUNA DA ESQUERDA -->
+            <div class="form-container sign-up-container">
+                <form id="formRegister">
+                    <h1>Criar Conta</h1>
+                    <input type="text" id="regName" placeholder="Nome">
+                    <input type="email" id="regEmail" placeholder="Email">
+                    <input type="password" id="regPass" placeholder="Senha">
+                    <button type="submit">Criar</button>
+                </form>
+            </div>
+
+
+
+
+
+            <!-- COLUNA DA DIREITA -->
+            <div class="form-container sign-in-container">
+                <form onsubmit="fazerLogin(event)">
+                    <h1>Login</h1>
+                    <a href="index.html" class="btn-voltar">← Voltar</a>
+                    <input id="loginEmail" type="email" placeholder="Email">
+                    <input id="loginPass" type="password" placeholder="Senha">
+                    <button type="submit">Entrar</button>
+                </form>
+
+            </div>
+
+            <!-- ANIMAÇÃO ENTRE MODOS -->
+            <div class="overlay-container">
+                <div class="overlay">
+
+                    <div class="overlay-panel overlay-left">
+                        <h1>Bem-vindo de volta!</h1>
+                        <p>Já tem conta?</p>
+                        <button class="ghost" id="signIn">Login</button>
+                    </div>
+
+                    <div class="overlay-panel overlay-right">
+                        <h1>Olá Seja bem vindo!</h1>
+                        <p>Não tem conta?</p>
+                        <button class="ghost" id="signUp">Criar Conta</button>
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+
+
+    <script>
+        async function fazerLogin(event) {
+            event.preventDefault(); // impede reload
+
+            const email = document.querySelector("#loginEmail").value;
+            const password = document.querySelector("#loginPass").value;
+
+            const resposta = await fetch("http://localhost:3000/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password })
+            });
+
+            const dados = await resposta.json();
+
+            if (!resposta.ok) {
+                alert(dados.message);
+                return;
+            }
+
+            // Salvando token
+            localStorage.setItem("token", dados.token);
+
+            alert("Login realizado!");
+
+            // Redireciona para a home
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <script src="login.js"></script>
+    <script defer src="script.js"></script>
+</body>
+
+</html>
