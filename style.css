@@ -2,11 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 
@@ -1402,8 +1400,6 @@ form button{
         margin: 20px auto;
     }
 
-
-    /* TÍTULO VIVIART dentro do quadrado */
     .titulo {
         margin-top: -50px;
         margin-right: 0;
@@ -1543,7 +1539,6 @@ form button{
         100% { opacity: 0.92; transform: translateY(0); }
     }
 
-    /* IMAGEM — metade dentro metade fora pela direita, flutuando */
     .img-fora {
         position: absolute;
         width: 150px;
@@ -1573,7 +1568,7 @@ form button{
 
  @media (max-width: 768px) {
 
-/* COLEÇÃO — MOBILE */
+
 .pagina.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1631,32 +1626,22 @@ form button{
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
 }
-
 .colecao .btn-detalhes:hover {
     background: #6D1231;
     color: #fff;
 }
 
-
-
-
  }
 
  @media (max-width: 768px) {
-
-    /* TÍTULO */
     .titulo-eventos {
         font-size: 32px;
         margin-top: 60px;
     }
-
-    /* CONTAINER */
     .timeline-container {
         padding: 30px 20px;
-        overflow: visible;
+        overflow: hidden;
     }
-
-    /* ESCONDE linha horizontal, setas e linha vertical no mobile */
     .timeline-line,
     #btnLeft,
     #btnRight,
@@ -1665,13 +1650,15 @@ form button{
     }
 
     /* TIMELINE vira coluna */
-    .timeline {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0;
-        transform: none !important; /* desativa o translateX do JS */
-        align-items: center;
-    }
+   .timeline {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    transform: none !important;
+    align-items: center;
+    width: 100%; 
+    overflow: hidden;
+}
 
     /* CADA EVENTO */
     .event {
@@ -1680,7 +1667,6 @@ form button{
         justify-content: center;
     }
 
-    /* REMOVE margens alternadas desktop */
     .event:nth-child(odd) .card,
     .event:nth-child(even) .card {
         margin: 0;
@@ -1688,7 +1674,7 @@ form button{
 
     /* CARD */
     .card {
-        width: 85vw;
+        width: 70vw;
         padding: 20px;
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.85);
@@ -1729,9 +1715,75 @@ form button{
         margin: 4px 0;
     }
 
-    /* DOT decorativo no canto */
     .dot {
         display: none;
     }
 }
 
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 30px 20px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+
+    .footer-esquerda img {
+        width: 80px;
+    }
+
+    .footer-esquerda p {
+        font-size: 14px;
+    }
+
+   
+    .footer-centro {
+        position: static;
+        transform: none;
+    }
+
+    .footer-centro h2 {
+        font-size: 18px;
+    }
+
+    .footer-centro a {
+        font-size: 15px;
+    }
+
+    /* DIREITA */
+    .footer-direita h2 {
+        font-size: 18px;
+    }
+
+    .icones-footer {
+        justify-content: center;
+    }
+
+    /* LINHA INFERIOR */
+    .footer-linha {
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .copy {
+        position: static;
+        transform: none;
+        font-size: 11px;
+    }
+
+    .feito {
+        font-size: 11px;
+        margin-right: 0;
+    }
+}

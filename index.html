@@ -306,14 +306,9 @@
                         <li>Passar pelo lado avesso</li>
                     </ul>
                 </div>
-
             </div>
         </div>
-
-
     </div>
-
-
 
 
     <!-- ===== MODAL EVENTOS ===== -->
@@ -342,26 +337,20 @@
                 <h2 id="evento-titulo"></h2>
                 <p id="evento-desc"></p>
             </div>
-
         </div>
     </div>
-
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-   
-
 
     <script>
         const user = JSON.parse(localStorage.getItem("loggedUser"));
-
         if (user) {
             document.getElementById("nomeUsuario").innerText = user.nome;
         }
-
         const btn = document.getElementById("logoutBtn");
         btn.addEventListener("click", () => {
             localStorage.removeItem("loggedUser");
