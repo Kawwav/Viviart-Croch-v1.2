@@ -107,7 +107,7 @@ header img {
 .iconeperfil {
     position: absolute;
     top: 20px;
-    right: 0px; /* ajuste se necessário */
+    right: 0px; 
 }
 
 .iconeperfil img {
@@ -138,15 +138,10 @@ header img {
 }
 
 .menu a {
-
     text-decoration: none;
-    /* remove o sublinhado */
     font-size: 20px;
-    /* tamanho do texto */
     color: #6D1231;
-    /* cor do texto (mude se quiser) */
     font-weight: bold;
-    /* deixa mais bonito */
     padding: 20px;
     border-right: 2px solid #6D1231;
 }
@@ -160,8 +155,6 @@ header img {
 .menu a:hover span {
     transform: translateY(-10px);
 }
-
-/* Remove a linha do último item */
 .menu a:last-child {
     border-right: none;
 }
@@ -173,8 +166,6 @@ header img {
     margin-top: 140px;
     font-weight: bold;
 }
-
-
 .quadrado {
     width: 1200px;
     height: 600px;
@@ -182,19 +173,14 @@ header img {
     margin: 40px auto;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* deixa o conteúdo mais para cima */
     padding-top: 100px;
-    /* distância do topo */
     text-align: center;
-
     position: relative;
     overflow: hidden;
-
     color: #972a4e;
     font-size: 80px;
 }
@@ -208,7 +194,6 @@ header img {
 .subtitulo {
     display: block;
     margin-top: 5px;
-    /* distancia para baixo */
     margin-left: 666px;
     color: #77062c;
 }
@@ -216,100 +201,66 @@ header img {
 .linha.vertical {
     position: absolute;
     height: 1100px;
-    /* altura da linha vertical */
     width: 6px;
-    /* largura da linha vertical */
     background-color: #6D1231;
     left: 50%;
-    /* centraliza horizontalmente */
     top: 100px;
-    /* começa do topo */
     transform: translateX(50%);
-    /* centraliza exatamente */
 }
 
 .linha.horizontal {
     position: absolute;
     height: 6px;
-    /* altura da linha horizontal */
     width: 670px;
-    /* largura da linha horizontal */
     background-color: #6D1231;
     left: 50%;
-    /* ponto inicial da linha horizontal */
     top: 100px;
-    /* altura em que a linha horizontal fica */
     transform: translateX(-99%);
-    /* centraliza em relação à vertical */
 }
 
 .linha.horizontal2 {
     position: absolute;
     height: 6px;
-    /* altura da linha horizontal */
     width: 670px;
-    /* largura da linha horizontal */
     background-color: #6D1231;
     left: 50%;
-    /* ponto inicial da linha horizontal */
     top: 450px;
-    /* altura em que a linha horizontal fica */
     transform: translateX(-99%);
-    /* centraliza em relação à vertical */
 }
 
 .linha.horizontal3 {
     position: absolute;
     height: 6px;
-    /* altura da linha horizontal */
     width: 670px;
-    /* largura da linha horizontal */
     background-color: #6D1231;
     right: -740px;
     top: 600px;
-    /* altura em que a linha horizontal fica */
     transform: translateX(-99%);
-    /* centraliza em relação à vertical */
 }
-
-
-/* Container principal do slider */
 .slider-container {
     position: absolute;
     top: 200px;
     left: 50%;
     transform: translate(-50%, -10%);
-    /* -10% para subir um pouco e não colidir com o texto */
     width: 700px;
     height: 460px;
 }
 
-/* Área onde as imagens ficam */
 .slider {
     position: relative;
-    /* Necessário para posicionamentos absolutos dentro */
     width: 100%;
-    /* Ocupa toda a largura do container */
     height: 100%;
-    /* Ocupa toda a altura do container */
 
 }
 
-/* TODAS as imagens do slider */
 .slide {
     position: absolute;
-    /* Permite mover as imagens livremente */
     top: 50%;
-    /* Centraliza verticalmente */
     left: 50%;
-    /* Centraliza horizontalmente */
     transform: translate(-50%, -50%);
-    /* Ajusta o centro real da imagem */
     transition: 0.6s ease;
-    /* Anima mudanças suaves */
 }
 
-/* IMAGEM DO FUNDO (qualquer slide que NÃO está ativo) */
 .slide:not(.active) {
     opacity: 0.4;
     filter: blur(4px);
@@ -317,33 +268,19 @@ header img {
     z-index: 1;
 }
 
-/* IMAGEM DA ESQUERDA (quando marcada como .left via JS) */
 .slide.left {
     transform: translate(-9%, -50%) rotate(-8deg) scale(0.8);
-    /* Move bem para esquerda, inclina levemente e reduz tamanho */
 }
 
-/* IMAGEM DA DIREITA (quando marcada como .right via JS) */
 .slide.right {
     transform: translate(30%, -50%) rotate(8deg) scale(0.8);
-    /* Move para a direita, inclina e reduz tamanho */
 }
-
-/* IMAGEM ATIVA (central) */
 .slide.active {
     width: 550px;
-    /* Imagem grande */
     opacity: 1;
-    /* Totalmente visível */
     filter: blur(0);
-    /* Sem desfoque */
     z-index: 5;
-    /* Fica na frente das outras */
-    transform: translate(-50%, -50%) scale(1);
-    /* Mantém central e no tamanho normal */
-}
-
-/* Estilo geral das setas */
+    transform: translate(-50%, -50%) scale(1);}
 .arrow {
     background-color: #972a4e;
     color: white;
@@ -356,26 +293,16 @@ header img {
     position: absolute;
     z-index: 50;
 }
-
-
-/* Posição da seta da esquerda */
 .left {
     position: absolute;
-    /* Fixa dentro do container */
     left: -10px;
-    /* Coloca à esquerda do slider */
     top: 50%;
-    /* Centraliza verticalmente */
 }
 
-/* Posição da seta da direita */
 .right {
     position: absolute;
-    /* Fixa dentro do container */
     right: -70px;
-    /* Coloca à direita do slider */
     top: 50%;
-    /* Centraliza verticalmente */
 }
 
 .wrapper {
@@ -394,9 +321,7 @@ header img {
             60% 0,
             140% 100%,
             0 100%);
-
     padding: 40px;
-    /* Adicione isso */
 }
 
 .img-fora {
@@ -412,56 +337,43 @@ header img {
     position: relative;
     padding: 80px 0;
     overflow: hidden;
-    /* para garantir que nada escape */
 }
 
 .secao-com-fundo::before {
     content: "";
     position: absolute;
     inset: 0;
-    /* ocupa toda a área */
     background-image: url('./img/close-up-feminino-de-trico.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.41;
-    /* somente o fundo */
     z-index: 0;
 }
 
 .secao-com-fundo .wrapper {
     position: relative;
     z-index: 2;
-    /* garante que fique acima do fundo */
 }
 
 .quadrado2 h2 {
     margin-left: 50px;
     font-size: 50px;
-    /* tamanho do título */
     color: #fff;
-    /* cor do texto */
     margin-bottom: 20px;
-    /* espaço abaixo do título */
     font-weight: 700;
-    /* deixa mais forte */
 }
 
 .quadrado2 p {
     margin-left: 20px;
     margin-top: 50px;
     font-size: 18px;
-    /* tamanho do parágrafo */
     color: #fff;
-    /* cor do texto */
     line-height: 1.6;
-    /* melhora a leitura */
     max-width: 600px;
-    /* não deixa o texto muito longo */
+
 }
 
-
-/* Oculta páginas que não estão ativas */
 .pagina {
     display: none;
     animation: fade 0.4s ease;
@@ -587,8 +499,6 @@ header img {
     }
 }
 
-
-/* Seus cards */
 .colecao {
     width: 300px;
     height: 350px;
@@ -628,7 +538,6 @@ header img {
 
 }
 
-/* ===== MODAL ===== */
 .modal {
     display: none;
     position: fixed;
@@ -663,7 +572,6 @@ header img {
     }
 }
 
-/* fechar */
 .close {
     position: absolute;
     top: 15px;
@@ -673,7 +581,6 @@ header img {
     color: #6D1231;
 }
 
-/* esquerda */
 .modal-left {
     width: 48%;
     display: flex;
@@ -681,10 +588,9 @@ header img {
     align-items: center;
 }
 
-/* área da imagem principal */
 .image-view {
     width: 100%;
-    height: 320px; /* 🔥 limita o tamanho */
+    height: 320px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -693,12 +599,10 @@ header img {
     background: #f7dce5;
 }
 
-
-/* imagem principal */
 .main-img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* 🔥 não estoura */
+    object-fit: contain;
     cursor: zoom-in;
     transition: transform 0.3s ease;
 }
@@ -708,7 +612,7 @@ header img {
     cursor: zoom-out;
 }
 
-/* miniaturas */
+
 .thumbs {
     width: 100%;
     margin-top: 15px;
@@ -731,8 +635,6 @@ header img {
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* direita */
-/* ===== TEXTO MODAL ===== */
 
 .modal-right {
     width: 52%;
@@ -800,7 +702,6 @@ header img {
     color: #6D1231;
 }
 
-/* ícone antes do texto */
 .lista-lavagem li::before {
     content: "✓";
     position: absolute;
@@ -808,10 +709,6 @@ header img {
     color: #972a4e;
     font-weight: bold;
 }
-
-
-
-
 
 .titulo-eventos {
     text-align: center;
@@ -828,11 +725,9 @@ header img {
     padding: 50px 0;
 }
 
-/* Linha horizontal */
 .timeline-line {
     position: absolute;
     top: 50%;
-    /* centro da tela */
     left: 0;
     width: 100%;
     height: 4px;
@@ -841,7 +736,6 @@ header img {
     z-index: 1;
 }
 
-/* Timeline */
 .timeline {
     display: flex;
     gap: 150px;
@@ -858,8 +752,6 @@ header img {
     position: relative;
     text-align: center;
 }
-
-/* Card */
 .card {
     cursor: pointer;
     width: 170px;
@@ -875,18 +767,14 @@ header img {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/*  Alternância automática dos cards */
 .event:nth-child(odd) .card {
     margin-bottom: 270px;
-    /* card em cima */
 }
 
 .event:nth-child(even) .card {
     margin-top: 270px;
-    /* card embaixo */
 }
 
-/* Linha vertical entre card e ponto */
 .vertical-line {
     position: absolute;
     left: 50%;
@@ -894,20 +782,15 @@ header img {
     width: 2px;
     background: #7b0038;
     z-index: 3;
-
-    /* Ajuste automático do tamanho baseado na posição do card */
 }
 
 .event:nth-child(odd) .vertical-line {
-    /* Card em cima → linha vai até embaixo */
-
     top: 160px;
     height: 52px;
 }
 
 
 .event:nth-child(even) .vertical-line {
-    /* Card embaixo → linha vai até em cima */
     bottom: 160px;
     height: 52px;
 }
@@ -930,34 +813,26 @@ header img {
     top: 50%;
     transform: translateY(-50%);
     background: #7b0038;
-    /* ← COR DO FUNDO */
     color: white;
-    /* ← COR DA SETA */
     border: none;
     padding: 10px 15px;
     font-size: 22px;
-    /* ← TAMANHO DA SETA */
     cursor: pointer;
     border-radius: 8px;
     z-index: 10;
 }
 
-/* seta esquerda */
 .arrow.left {
     left: 20px;
-    /* ← POSIÇÃO LATERAL */
 }
 
-/* seta direita */
 .arrow.right {
     right: 20px;
-    /* ← POSIÇÃO LATERAL */
 }
 
 /* efeito ao passar o mouse */
 .arrow:hover {
     background: #a3004d;
-    /* ← HOVER */
 }
 
 /* ===== MODAL EVENTO ===== */
@@ -1062,7 +937,6 @@ header img {
     align-items: flex-start;
     gap: 40px;
     position: relative;
-    /* IMPORTANTE */
 }
 
 .footer-esquerda img {
@@ -1124,28 +998,18 @@ header img {
     transform: translateY(20px);
 }
 
-
-/* Linha inferior */
 .footer-linha {
     border-top: 1px solid #333;
-
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-
     margin-top: 30px;
     padding-top: 15px;
-
     display: flex;
     justify-content: flex-end;
-    /* empurra tudo para a direita */
     align-items: center;
-
-
     position: relative;
-    /* necessário para o centro absoluto */
 }
 
-/* Texto central */
 .copy {
     position: absolute;
     left: 50%;
@@ -1156,7 +1020,6 @@ header img {
     color: #6D1231;
 }
 
-/* Texto da direita */
 .feito {
     font-size: 12px;
     margin: 0;
@@ -1169,8 +1032,6 @@ body {
     overflow-x: hidden;
 }
 
-
-/* estado inicial escondido */
 .pagina .colecao {
     opacity: 0;
     transform: translateY(60px) scale(0.9);
@@ -1285,8 +1146,8 @@ body {
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza vertical */
-  align-items: center;     /* centraliza horizontal */
+  justify-content: center; 
+  align-items: center;     
   height: 100%;
   width: 50%;
 }
@@ -1294,7 +1155,7 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza horizontal */
+  align-items: center; 
   gap: 12px;
   width: 100%;
 }
@@ -1309,7 +1170,7 @@ form input{
 
 form input,
 form button {
-  width: 320px; /* pode ajustar */
+  width: 320px; 
 }
 
 form button{
@@ -1492,3 +1353,385 @@ form button{
     transform:translateX(100%);
   }
 }
+
+/*insta e whats header e viviar*/
+@media (max-width: 768px) {
+    .icone {
+        width: 28px;
+    }
+
+    .icones {
+        gap: 6px;
+    }
+
+    header img {
+        
+        width: 250px;
+        display: block;
+        margin:  auto;
+    }
+
+   .menu {
+    justify-content: center;
+    gap: 9px;
+}
+
+.menu a {
+    font-size: 16px;
+    padding: 10px;
+}
+
+    .iconeperfil {
+    right: 55px;
+}
+}
+@media (max-width: 768px) {
+    .icones2 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* QUADRADO */
+    .quadrado {
+        width: 92vw;
+        height: 420px;
+        padding-top: 60px;
+        font-size: 42px;
+        margin: 20px auto;
+    }
+
+
+    /* TÍTULO VIVIART dentro do quadrado */
+    .titulo {
+        margin-top: -50px;
+        margin-right: 0;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .subtitulo {
+        margin-left: 0;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    /* SLIDER CONTAINER */
+    .slider-container {
+        width: 92vw;
+        height: 280px;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    /* IMAGEM ATIVA */
+    .slide.active {
+        width: 220px;
+    }
+
+    /* IMAGENS LATERAIS */
+    .slide:not(.active) {
+        width: 120px;
+    }
+
+    /* SETAS */
+    .arrow {
+        font-size: 22px;
+        padding: 2px 12px;
+        border-radius: 8px;
+    }
+
+    .left {
+        left: 0px;
+    }
+
+    .right {
+        right: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .secao-com-fundo {
+    padding: 60px 0 80px;
+    overflow: hidden; 
+}
+
+    .wrapper {
+        width: 88vw;
+        margin: 20px auto;
+        position: relative;
+    }
+
+    /* QUADRADO VERMELHO */
+   .quadrado2 {
+    width: calc(100% + 20px);
+    height: auto;
+    min-height: 280px;
+    margin-top: 50px;
+    margin-left: -20px;
+    padding: 35px 25px;
+    clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%);
+    border-radius: 20px;
+    text-align: left;
+    background: linear-gradient(135deg, #6D1231 0%, #a0003a 60%, #c0005a 100%);
+    box-shadow:
+        0 0 0 4px #ff6b9d44,
+        0 0 30px #c0005a88,
+        0 20px 50px rgba(0,0,0,0.4);
+    animation: sobreEntrada 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+    @keyframes sobreEntrada {
+        0% {
+            opacity: 0;
+            transform: translateX(-60px) rotate(-2deg);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
+    }
+
+    /* brilho deslizando */
+    .quadrado2::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            120deg,
+            transparent 30%,
+            rgba(255,255,255,0.12) 50%,
+            transparent 70%
+        );
+        background-size: 200% 100%;
+        animation: brilhoSlide 3s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    @keyframes brilhoSlide {
+        0% { background-position: 200% center; }
+        100% { background-position: -200% center; }
+    }
+
+    .quadrado2 h2 {
+        margin-left: 0;
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        animation: tituloEntrada 1s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes tituloEntrada {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .quadrado2 p {
+        margin-left: 0;
+        margin-top: 12px;
+        font-size: 12px;
+        max-width: 55%;
+        line-height: 1.8;
+        animation: textoEntrada 1s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes textoEntrada {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 0.92; transform: translateY(0); }
+    }
+
+    /* IMAGEM — metade dentro metade fora pela direita, flutuando */
+    .img-fora {
+        position: absolute;
+        width: 150px;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        border-radius: 24px;
+        box-shadow:
+            0 0 0 3px #ff6b9d,
+            0 0 20px #ff6b9d88,
+            0 15px 40px rgba(0,0,0,0.5);
+        z-index: 10;
+        animation: imagemFlutua 3s ease-in-out infinite,
+                   imagemEntrada 1s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes imagemFlutua {
+        0%, 100% { transform: translateY(-50%) rotate(-1deg); }
+        50% { transform: translateY(calc(-50% - 10px)) rotate(1deg); }
+    }
+
+    @keyframes imagemEntrada {
+        0% { opacity: 0; transform: translateY(-50%) translateX(60px) scale(0.8); }
+        100% { opacity: 1; transform: translateY(-50%) translateX(0) scale(1); }
+    }
+}
+
+ @media (max-width: 768px) {
+
+/* COLEÇÃO — MOBILE */
+.pagina.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 0 16px;
+}
+
+.colecao {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(109, 18, 49, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.colecao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(109, 18, 49, 0.2);
+}
+
+.colecao img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.colecao h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6D1231;
+    margin: 10px 10px 6px;
+    text-align: center;
+}
+
+/* BOTÃO VER DETALHES */
+.colecao .btn-detalhes {
+    margin: 0 12px 14px;
+    width: calc(100% - 24px);
+    padding: 8px 0;
+    background: transparent;
+    border: 1.5px solid #6D1231;
+    border-radius: 30px;
+    color: #6D1231;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.colecao .btn-detalhes:hover {
+    background: #6D1231;
+    color: #fff;
+}
+
+
+
+
+ }
+
+ @media (max-width: 768px) {
+
+    /* TÍTULO */
+    .titulo-eventos {
+        font-size: 32px;
+        margin-top: 60px;
+    }
+
+    /* CONTAINER */
+    .timeline-container {
+        padding: 30px 20px;
+        overflow: visible;
+    }
+
+    /* ESCONDE linha horizontal, setas e linha vertical no mobile */
+    .timeline-line,
+    #btnLeft,
+    #btnRight,
+    .vertical-line {
+        display: none;
+    }
+
+    /* TIMELINE vira coluna */
+    .timeline {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        transform: none !important; /* desativa o translateX do JS */
+        align-items: center;
+    }
+
+    /* CADA EVENTO */
+    .event {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* REMOVE margens alternadas desktop */
+    .event:nth-child(odd) .card,
+    .event:nth-child(even) .card {
+        margin: 0;
+    }
+
+    /* CARD */
+    .card {
+        width: 85vw;
+        padding: 20px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.85);
+        border: none;
+        box-shadow: 0 4px 20px rgba(109, 18, 49, 0.15);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* linha colorida na esquerda do card */
+    .card::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: linear-gradient(to bottom, #6D1231, #ff6b9d);
+        border-radius: 4px 0 0 4px;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(109, 18, 49, 0.25);
+    }
+
+    .card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #6D1231;
+        margin-bottom: 6px;
+    }
+
+    .card p {
+        font-size: 13px;
+        color: #a35a72;
+        margin: 4px 0;
+    }
+
+    /* DOT decorativo no canto */
+    .dot {
+        display: none;
+    }
+}
+
